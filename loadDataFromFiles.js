@@ -3,6 +3,7 @@ const fs = require('fs').promises;
 const fileWithText = 'text.txt';
 const fileWithPhotos = 'photos.txt';
 const fileWithGroups = 'groups.txt';
+const fileWithPrivateGroups = 'privateGroups.txt';
 
 const getDirectories = async source =>
   (await fs.readdir(source, { withFileTypes: true }))
@@ -27,8 +28,11 @@ const loadAll = async () => {
   let groups = await fs.readFile(fileWithGroups, 'utf8');
   groups = groups.split('\n');
 
+  let privateGroups = await fs.readFile(fileWithPrivateGroups, 'utf8');
+  privateGroups = privateGroups.split('\n');
+
   return {
-    animals, groups
+    animals, groups, privateGroups
   }
 }
 
