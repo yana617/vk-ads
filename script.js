@@ -22,7 +22,7 @@ const postAnimal = async (animal, groupId) => {
     const vkApi = `${vkBaseUrl}?owner_id=${groupId}&message=${text}&attachments=${photos.join(',')}&from_group=0&&access_token=${accessToken}&v=5.124`;
     const encodedURL = encodeURI(vkApi);
     const { data } = await axios.get(encodedURL);
-    console.log(new Date().toLocaleString('ru'), data.response, groupId);
+    console.log(new Date().toLocaleString('ru'), data, groupId);
   } catch (err) {
     console.log('Error: ', err.message);
   }
