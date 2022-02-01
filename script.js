@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const accessToken = process.env.TOKEN;
 const vkBaseUrl = 'https://api.vk.com/method/wall.post';
-const minutes = 0.001;
+const minutes = 20;
 
 function sleep(ms) {
   return new Promise((resolve) => {
