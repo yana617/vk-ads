@@ -38,8 +38,8 @@ const sendAllAds = async (allPosts) => {
 
 const startMainLoop = async (animals, groups) => {
   const allPosts = [];
-  for (let groupId of groups) {
-    for (let animal of animals) {
+  for (let animal of animals) {
+    for (let groupId of groups) {
       allPosts.push({ animal, groupId });
     }
   }
