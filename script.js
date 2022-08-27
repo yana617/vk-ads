@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const accessToken = process.env.TOKEN;
 const vkBaseUrl = 'https://api.vk.com/method/wall.post';
-const minutes = 20;
+const minutes = 17;
 
 let tasksToDo = [];
 
